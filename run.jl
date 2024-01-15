@@ -1,6 +1,6 @@
 
 using AnyMOD
-using Gurobi # other JuMP compatible solvers should work as well
+using HiGHS # other JuMP compatible solvers should work as well
 
 # enter one of the tree cases provided for the benchmark problem ("power_hourly","power_and_heat_hourly","all_hourly")
 case = "power_hourly"
