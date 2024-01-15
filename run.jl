@@ -15,7 +15,7 @@ createOptModel!(mod_obj)
 setObjective!(:costs,mod_obj)
 
 # solves optimization model
-optimize!(mod_obj.optModel,with_optimizer(Gurobi.Optimizer, Method = 2, BarOrder = 0, Crossover = 1))
+optimize!(mod_obj.optModel,with_optimizer(HiGHS.Optimizer))
 
 # write aggregated results
 reportResults(:summary,mod_obj)
